@@ -1,7 +1,7 @@
 # l2v
 Like2Vec implementation
 
-
+<img src="images/pipeline.png">
 
 # Dataset
 
