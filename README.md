@@ -27,7 +27,7 @@ To test Log-Likelihood ratio code, "ratings.dat" file had the timestamp removed 
 
 "ratings_filtered.dat" is in the following format:       
 **UserID, MovieID, Rating**
-```
+
 
 # Deep Walk
 
