@@ -27,3 +27,13 @@ To test Log-Likelihood ratio code, "ratings.dat" file had the timestamp removed 
 
 "ratings_filtered.dat" is in the following format:       
 **UserID, MovieID, Rating**
+```
+
+# Deep Walk
+
+
+
+# Root Mean Squared Error
+The current RMSE module is to be split in the following classes:
+
+<img src="images/rmse.png">
