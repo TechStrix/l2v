@@ -21,6 +21,8 @@ UserID::MovieID::Rating::Timestamp
 - Each user has at least 20 ratings
 
 # Log-Likelihood Ratio
+The Log Likelihood Ratio (LLR) was created by Ted Dunning in his paper, **“Accurate Methods for the Statistics of Surprise and Coincidence".** The LLR relies on calculating similarity between two users or items based on statistics that revolve around occurrences related to these users or items.
+
 To test Log-Likelihood ratio code, "ratings.dat" file had the timestamp removed with:
 
 ``` cat ratings.dat | awk -F  "::" '{print $1", " $2", " $3}' > ratings_filtered.dat```
@@ -28,10 +30,26 @@ To test Log-Likelihood ratio code, "ratings.dat" file had the timestamp removed 
 "ratings_filtered.dat" is in the following format:       
 **UserID, MovieID, Rating**
 
+The inputs for this module follow the format:       
+[USER-ID, MOVIE-ID, RATING]
+```
+850384,1530,3.0
+513501,1530,4.0
+152583,1530,3.0
+```
+
+The output of the module follows the format:     
+((USER-ID1, USER-ID2), LOG LIKELIHOOD RATIO)       
+```
+((1354067,345351),0.43)
+((695858,2397231),0.78)
+((2050389,654334),0.15)
+```
+
 
 # Deep Walk
 
- DeepWalk is an unsupervised learning algorithm that learns a vector representation of each vertex in a graph. Vector representations are learned using walks (usually random walks) on the vertices in the graph. 
+ DeepWalk is an unsupervised learning algorithm that learns a vector representation of each vertex in a graph. Vector representations are learned using walks (usually random walks) on the vertices in the graph.
 
 ```
 @inproceedings{Perozzi:2014:DOL:2623330.2623732,
