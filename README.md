@@ -25,7 +25,7 @@ The Log Likelihood Ratio (LLR) was created by Ted Dunning in his paper, **“Acc
 
 To test Log-Likelihood ratio code, "ratings.dat" file had the timestamp removed with:
 
-``` cat ratings.dat | awk -F  "::" '{print $1", " $2", " $3}' > ratings_filtered.dat```
+``` cat ratings.dat | awk -F  "::" '{print $1","$2","$3}' > ratings_filtered.dat```
 
 "ratings_filtered.dat" is in the following format:       
 **UserID, MovieID, Rating**
